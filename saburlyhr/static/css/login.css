@@ -27,6 +27,7 @@ body {
     top: 30%;
     left: 33%;
     background: white;
+    border-radius: 20px;
     color: black;
     text-align: center;
     transition: 0.25s;
