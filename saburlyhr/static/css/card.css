@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    margin: 1%;
+    padding: 1%;
+    border:1px solid grey;
+    border-radius: 15px;
+    background-color: azure;
+    width: fit-content;
+}
+.card {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.txtAbsence {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style:italic;
+}
