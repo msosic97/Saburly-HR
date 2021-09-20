@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from django.contrib import auth
 
 # Create your views here.
-def login(request):
-    return render(request, 'account/login.html')
+def index(request):
+    return render(request, 'pages/index.html')
+

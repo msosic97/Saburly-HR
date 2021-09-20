@@ -1,37 +1,24 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% extends 'base.html' %}
 
-</head>
-<body>
-      
-    <div class="container">
-        <div class="row">
-            <div class="logo">
-            <img src="{% static 'img/logo.JPG' %}" alt="">
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <form action="{% url 'login' %}" method="POST" class="box">
-                        <h1>Login</h1>
-                        <p class="subtitle"> Please enter your login and password!</p> 
-                        <input type="text" name="" placeholder="Username"> 
-                        <input type="password" name="" placeholder="Password"> 
-                        <a class="forgot text-muted" href="#">Forgot password?</a> 
-                        <input type="submit" name="" value="Login" href="#">
-                        
-                    </form>
-                </div>
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="logo">
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <form action="{% url 'login' %}" method="POST" class="box">
+                    {% csrf_token %}
+                    <h1>Login</h1>
+                    <p class="subtitle"> Please enter your login and password!</p> 
+                    <label for="Username">Username:</label>
+                    <input type="text" name="username" placeholder="Username" required>
+                    <label for="Password">Password:</label>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="submit" value="Login">
+                </form>
             </div>
         </div>
     </div>
-</body>
-
-
-</html>
+</div>
+{% endblock %}
