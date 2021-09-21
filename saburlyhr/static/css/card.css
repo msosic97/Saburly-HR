@@ -5,9 +5,6 @@ body {
 .container {
     margin: 1%;
     padding: 1%;
-    border:1px solid grey;
-    border-radius: 15px;
-    background-color: azure;
     width: fit-content;
 }
 .card {

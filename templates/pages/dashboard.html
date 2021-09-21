@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../saburlyhr/static/css/dashboard.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../saburlyhr/static/css/card.css">
+    <script src="../../saburlyhr/static/js/card.js"></script>
+
+
+    <title>Dashboard</title>
+
+</head>
+<body>
+
+    <!--Navbar-->
+    <nav class="nav">
+        <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../../templates/pages/dashboard.html">
+                <img src="../../saburlyhr/static/img/logo.JPG" alt="logo">
+              </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto logout">
+            <li class="nav-item active mr-3">
+                <a id="logout" class="nav-link" href="../../templates/account/login.html"><img src="../../saburlyhr/static/img/logout.png" width="30px" alt="logout"> Logout</a>
+              </li>
+        </ul>
+    </nav>
+
+    <!--Welcome section-->
+    <section id="welcome">
+        <h1>Selam alejkum dragi "korisnice"!</h1>
+    </section>
+
+    <!--Content page-->
+    <div class="content-div">
+        
+        <!--Left div-->
+ 
+        <div class="left-div">
+            <h3><u> Time off </u></h3><br><br>
+            <ul>
+                <li><button type="button" class="btn btn-primary" value="Show Div" onclick="showDiv1()">Add new date</button></li><br>
+                <li><button type="button" class="btn btn-primary" value="Show Div3" onclick="showDiv3()">Show your list</button></li>
+            </ul>
+            <br><br><br><br><br><br>
+        </div>
+
+        <!--Right div-->
+
+        <div id='right-div' class="right-div" >
+            <!--container represent "Add new date" button-->
+            <div id="first-container" style="display: none;" class="container">
+                <h2 class="txtAbsence">Add new absence	&nbsp; 
+                    <button type="button" class="btn btn-primary" value="Show Div2" onclick="showDiv2()">ADD</button></h2>
+
+                <!--Card code-->
+                <div id="card" style="display: none;">
+                    <p>Please fulfill form bellow :</p>
+                    <form action="/action_page.php">
+                        
+                        <label for="initilDate">Date from: &nbsp;</label>
+                        <input type="date" id="initialDate" placeholder="dd-mm-yyyy" name="dateFrom" required>
+                        <label for="initilDate"> 	&nbsp; to 	&nbsp; </label>
+                        <input type="date" id="initialDate" placeholder="dd-mm-yyyy" name="dateTo" required><br><br>
+
+                        <div class="form-group">
+                            <label for="comment">Description:</label>
+                            <textarea class="form-control" rows="5" id="comment" name="text" required></textarea>
+                        </div>
+
+                        <div id="wrapper">
+                            <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <!--Show your list button-->
+            <div id="second-container">
+
+
+
+
+
+
+
+            </div> 
+            
+            <br><br><br><br><br><br><br><br><br>
+        </div>
+
+
+    </div>
+
+
+
+
+    
+</body>
+</html>
