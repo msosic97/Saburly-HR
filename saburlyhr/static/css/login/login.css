@@ -4,16 +4,16 @@ body {
     font-family: sans-serif;
     background: #5763ab;
 }
-.logo{
+/* .logo{
     position: relative;
     margin-top: 3%;
     top: 20%;
     left: 40%;
-}
+} */
 
-.card {
+.login {
     margin-bottom: 20px;
-    border: none
+    border: none;
 }
 
 .subtitle {

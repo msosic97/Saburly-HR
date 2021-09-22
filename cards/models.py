@@ -14,4 +14,4 @@ class Card(models.Model):
     is_processed = models.BooleanField(default=False)
 
     def __str__(self):
-        return ('Time off')
+        return (self.user.username)
