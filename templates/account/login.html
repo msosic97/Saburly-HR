@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block title %}| Login{% endblock %}
 
 {% block content %}
 <div class="container">
@@ -6,7 +7,7 @@
         <div class="logo">
         </div>
         <div class="col-md-6">
-            <div class="card">
+            <div class="login">
                 <form action="{% url 'login' %}" method="POST" class="box">
                     {% csrf_token %}
                     <h1>Login</h1>

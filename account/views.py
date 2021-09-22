@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib import auth
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from cards.models import Card
 
 # Create your views here.
 def account(request):
