@@ -42,6 +42,3 @@ def logout(request):
         #user logout
         auth.logout(request)
         return redirect('/')
-    
-
-
