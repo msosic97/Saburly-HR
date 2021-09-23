@@ -1,5 +1,5 @@
 from os import name
-from django.contrib.auth import logout
+from django.contrib.auth import login, logout
 from django.urls import path
 
 from . import views

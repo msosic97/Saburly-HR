@@ -3,11 +3,21 @@ from django.http import HttpResponse
 from django.contrib import auth
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from cards.models import Card
+from .forms import LoginForm
 
 # Create your views here.
 def account(request):
-    return render(request, 'account/login.html')
+    
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+
+        if form.is_valid():
+            return redirect('login')
+    else:
+        form = LoginForm()
+    
+    return render(request, 'account/login.html', {'form': form})
+
 
 def login(request):
     if request.method == 'POST':
@@ -19,10 +29,8 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            print('radddiiiiiiiiiiiii')
             return redirect('dashboard')
         else:
-            print('ne radiiiiiiiiii')
             return redirect('account')
 
 @login_required
