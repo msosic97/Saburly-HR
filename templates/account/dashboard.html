@@ -54,18 +54,10 @@
                 <!--Card code-->
                 <div id="card" style="display: none;">
                     <p>Please fulfill form bellow :</p>
-                    <form action="" method="POST">
+                    <form action="submitCard" method="POST">
                         {% csrf_token %}
                         
-                        <label for="initilDate">Date from: &nbsp;</label>
-                        <input type="date" id="initialDate" placeholder="dd-mm-yyyy" name="date_from" required>
-                        <label for="initilDate"> 	&nbsp; to 	&nbsp; </label>
-                        <input type="date" id="initialDate" placeholder="dd-mm-yyyy" name="date_to" required><br><br>
-
-                        <div class="form-group">
-                            <label for="comment">Description:</label>
-                            <textarea class="form-control" rows="5" id="comment" name="description" required></textarea>
-                        </div>
+                        {{ cardForm }}
 
                         <div id="wrapper">
                             <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
