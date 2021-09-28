@@ -6,7 +6,7 @@ from .models import Card
 class CardAdmin(admin.ModelAdmin):
     list_display = ('user', 'date_from', 'date_to', 'is_processed',)
     list_display_links = ('user',)
-    list_filter = ('user', 'is_processed',)
+    list_filter = ('user', 'is_processed')
 
 
 admin.site.register(Card, CardAdmin)

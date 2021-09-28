@@ -10,5 +10,6 @@ function showDiv2() {
 function showDiv3() {
     document.getElementById('first-container').style.display = "none";
     document.getElementById('second-container').style.display = "block";
-    document.getElementById('second-container').innerHTML= "Biti ce bolje aBd, ali ne vjerujem. Provjerite je li placena vezifa!";
 }
+
+

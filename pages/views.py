@@ -6,14 +6,14 @@ from .forms import LoginForm
 def getLogin(request):
     
     if request.method == 'POST':
-        form = LoginForm(request.POST)
+        loginForm = LoginForm(request.POST)
 
-        if form.is_valid():
+        if loginForm.is_valid():
             return redirect('login')
     else:
-        form = LoginForm()
+        loginForm = LoginForm()
     
-    return render(request, 'account/login.html', {'form': form})
+    return render(request, 'account/login.html', {'loginForm': loginForm})
 
 
 def login(request):

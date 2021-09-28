@@ -1,18 +1,20 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}| Login{% endblock %}
 
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="logo">
+    <div class="page">
+        <div class="logo-box">
+            <img src="{% static 'img/logo.JPG' %}" alt="logo">
         </div>
-        <div class="col-md-6">
+        <div class="login-box">
             <div class="login">
                 <form action="{% url 'login' %}" method="POST" class="box">
                     {% csrf_token %}
                     <h1>Login</h1>
                     <p class="subtitle"> Please enter your login and password!</p> 
-                    {{ form }}
+                    {{ loginForm }}
                     <input type="submit" value="Login">
                 </form>
             </div>
