@@ -2,7 +2,8 @@ from django import forms
 
 class CardForm(forms.Form):
     date_from = forms.DateField(label='Date from', widget = forms.TextInput(attrs={
-        'type': 'date'
+        'type': 'date',
+        
     }))
     date_to = forms.DateField(label='Date from', widget = forms.TextInput(attrs={
         'type': 'date'
