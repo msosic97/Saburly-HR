@@ -3,12 +3,12 @@
 {% block title %}| Login{% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="page">
-        <div class="logo-box">
+<div>
+    <div>
+        <div >
             <img src="{% static 'img/logo.JPG' %}" alt="logo">
         </div>
-        <div class="login-box">
+        <div >
             <div class="login">
                 <form action="{% url 'login' %}" method="POST" class="box">
                     {% csrf_token %}
