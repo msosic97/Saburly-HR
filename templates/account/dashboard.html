@@ -54,13 +54,14 @@
                 <!--Card code-->
                 <div id="card" style="display: none;">
                     <p>Please fulfill form bellow :</p>
-                    <form action="submitCard" method="POST">
+                    <form action="submitCard" method="POST" style="width: 300px;">
                         {% csrf_token %}
                         
-                        {{ cardForm }}
+                        <div id="form-wrapper" style="width:250px; display: flex; gap:1px; flex-direction:column;">{{ cardForm }}</div>
+                        
 
                         <div id="wrapper">
-                            <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+                            <button id="submitBtn" type="submit" class="btn btn-primary" style="margin-top: 5px;">Submit</button>
                         </div>
 
                     </form>

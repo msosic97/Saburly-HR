@@ -13,6 +13,15 @@ body {
     align-items: center;
 }
 
+#card form {
+    max-width: 400px;
+}
+
+form .dateinput {
+    color:brown;
+    background-color: black;
+}
+
 #wrapper {
     display: flex;
     align-items: center;

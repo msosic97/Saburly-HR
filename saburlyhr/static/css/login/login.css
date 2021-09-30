@@ -12,9 +12,9 @@ body {
     justify-content: center;
 }
 .box {
-    width: 40%;
+    width: 25%;
     padding: 30px;
- 
+    border-radius: 15px;
     background: white;
     color: black;
     text-align: center;
