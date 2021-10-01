@@ -28,5 +28,5 @@ def login(request):
             auth.login(request, user)
             return redirect('dashboard')
         else:
-            return redirect('getLogin')
+            return redirect('/')
 
