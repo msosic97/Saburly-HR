@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}| Dashboard{% endblock %}
+{% block title %}| Dashboard | New form{% endblock %}
 
 {% block content %}
 
@@ -42,6 +42,31 @@
             </ul>
             <br><br><br><br><br><br>
         </div>
-        
+
+        <!--Right div-->
+
+        <div id='right-div' class="right-div" >
+            <!--container represent "Add new date" button-->
+            <div id="first-container" style="display: block;" class="container">
+                <h2 class="txtAbsence">Add new absence	&nbsp;</h2>
+
+                <!--Card code-->
+                <div id="card" style="display: block;">
+                    <p>Please fulfill form bellow :</p>
+                    <form action="submitCard" method="POST" style="width: 300px;">
+                        {% csrf_token %}
+                        
+                        <div id="form-wrapper" style="width:250px; display: flex; gap:1px; flex-direction:column;">{{ cardForm }}</div>
+                        
+
+                        <div id="wrapper">
+                            <button id="submitBtn" type="submit" class="btn btn-primary" style="margin-top: 5px;">Submit</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
     </div>
 {% endblock %}
