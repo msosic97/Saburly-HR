@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}| Dashboard{% endblock %}
+{% block title %}| Show-list{% endblock %}
 
 {% block content %}
 
@@ -42,6 +42,36 @@
             </ul>
             <br><br><br><br><br><br>
         </div>
-        
+
+        <!--Right div-->
+
+        <div id='right-div' class="right-div" >
+
+            <!--Show your list button-->
+            <div id="second-container">
+                <div class="show-list">
+                    <h2>Your cards list</h2>
+                    <div class="cards-list">
+
+                        {% if cards %}
+                            {% for card in cards %}
+                                <!-- Card 1 -->
+                            <div class="date-card">
+                                <p class="label">Date from:</p>
+                                <p class="dateFrom">{{card.date_from}}</p>
+                                <p class="label">Date to:</p>
+                                <p class="dateTo">{{card.date_to}}</p>
+                                <p class="label">Description:</p>
+                                <p class="desc">{{card.description}}</p>                                
+                            </div>
+
+                            <!-- Pop out infodiv -->
+                            
+                            {% endfor %}
+                        {% endif %}           
+                    </div>
+                </div>
+            </div> 
+        </div>
     </div>
 {% endblock %}

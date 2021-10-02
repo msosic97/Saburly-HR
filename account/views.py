@@ -7,19 +7,7 @@ from cards.models import Card
 # Create your views here.
 @login_required
 def dashboard(request):
-    if request.method == 'POST':
-        cardForm = CardForm(request.POST)
-        if cardForm.is_valid():
-            return redirect('cardsubmit')
-    else:
-        cardForm = CardForm()
-
-    cards = Card.objects.all().filter(user_id = request.user.id)
-    context = {
-        'cardForm': cardForm,
-        'cards' : cards
-    }
-    return render(request, 'account/dashboard.html', context)
+    return render(request, 'account/dashboard.html')
 
 def submitCard(request):
     if request.method == 'POST':
@@ -46,3 +34,28 @@ def logout(request):
         #user logout
         auth.logout(request)
         return redirect('/')
+
+
+
+def newform(request):
+    if request.method == 'POST':
+        cardForm = CardForm(request.POST)
+        if cardForm.is_valid():
+            return redirect('cardsubmit')
+    else:
+        cardForm = CardForm()
+
+    cards = Card.objects.all().filter(user_id = request.user.id)
+    context = {
+        'cardForm': cardForm,
+    }
+    return render(request, 'account/newform.html', context)
+
+
+def showlist(request):
+    
+    cards = Card.objects.all().filter(user_id = request.user.id)
+    context = {
+        'cards' : cards,
+    }
+    return render(request, 'account/showlist.html', context)
